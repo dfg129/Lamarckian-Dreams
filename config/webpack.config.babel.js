@@ -38,7 +38,7 @@ webpackConfig.entry = {
 
 webpackConfig.output = {
   filename: `[name].js`,
-  path: paths.base('build'),
+  path: paths.base(config.dir_build),
   publicPath: "/"
 }
 

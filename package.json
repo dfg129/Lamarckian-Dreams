@@ -2,7 +2,7 @@
   "name": "lamarckian_dreams",
   "version": "1.0.0",
   "description": "index.js",
-  "main": "babel.server.js",
+  "main": "server.js",
   "scripts": {
     "clean": "rimraf dist",
     "compile": "node -r dotenv/config --harmony bin/compile",
@@ -15,7 +15,7 @@
   },
   "betterScripts": {
     "dev": {
-      "command": "nodemon -r dotenv/config/bin/server",
+      "command": "nodemon -r dotenv/config ./bin/server",
       "env": {
         "NODE_ENV": "development"
       }
@@ -68,6 +68,7 @@
     "koa-connect-history-api-fallback": "^0.3.0",
     "koa-convert": "^1.2.0",
     "koa-static": "^2.0.0",
+    "nodemon": "^1.8.1",
     "path": "^0.12.7",
     "piping": "^0.3.0",
     "postcss": "^5.0.14",
