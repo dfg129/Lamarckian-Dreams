@@ -10,7 +10,6 @@ const debug = _debug('app:webpack:config')
 const paths = config.utils_paths
 const {__DEV__, __PROD__, __TEST__} = config.globals
 
-console.log("###### to blave")
 debug('Configure ' + config.globals)
 const webpackConfig = {
   name: 'client',
@@ -28,8 +27,7 @@ const webpackConfig = {
   module: {}
 }
 
-const APP_ENTRY_PATH = './src/root.js'
-
+const APP_ENTRY_PATH = paths.client('root.js')
 
 webpackConfig.entry = {
   app: __DEV__
@@ -40,7 +38,7 @@ webpackConfig.entry = {
 
 webpackConfig.output = {
   filename: `[name].js`,
-  path: ".",
+  path: paths.base(config.dir_build),
   publicPath: "/"
 }
 
