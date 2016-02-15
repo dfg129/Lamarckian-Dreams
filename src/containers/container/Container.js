@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import styles from './container.styl'
 import _debug from 'debug'
+import background_img from '../../../assets/images/background2.png'
 
 const debug = _debug("app:views:container")
 
@@ -20,12 +21,19 @@ class Container extends React.Component {
   }
 
   render () {
+    var style = {
+      backgroundImage: 'url(' + background_img + ')',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      maxWidth: '100%'
+    }
+
     return (
       <div className="container">
         <div className="header">
           {this.getHeader()}
         </div>
-        <div className="main">
+        <div className="main" style={style}>
           {this.props.main}
         </div>
       </div>

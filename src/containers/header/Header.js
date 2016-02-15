@@ -5,22 +5,25 @@ import AppBar from 'material-ui/lib/app-bar'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import * as actionCreators from '../../actions/app-bar'
 import MenuItem from 'material-ui/lib/menus/menu-item'
-import header_img from '../../assets/ld1.jpg
+import header_img from '../../../assets/images/ld1.png'
 import _debug from 'debug'
 
 const debug = _debug('app:view:header')
 
 class Header extends React.Component {
   render () {
-    debug(this.props)
+    debug(header_img)
 
     var style = {
-      backgroundImage: 'url(header_img)'
+      maxWidth: '100%',
+      width: '100%',
+      height: '20vh'
     }
 
     return (
-        <AppBar className="main-nav" title={this.props.title} style={style} onClick={this.props.toggleNavBar}>
-        </AppBar>
+      <div  onClick={this.props.toggleNavBar}>
+        <img style={style} src={header_img}/>
+      </div>
     )
   }
 }

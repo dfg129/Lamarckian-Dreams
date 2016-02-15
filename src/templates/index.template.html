@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="{%=o.htmlWebpackPlugin.files.favicon%}">
     {% } %}
   </head>
-  <body style="height:100vh">
+  <body style="height:100vh; background-color:black">
     <div id="react-root" style="height:100vh"></div>
     {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
     <script type="text/javascript" src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry%}"></script>

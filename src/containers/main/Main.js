@@ -13,10 +13,10 @@ class Main extends React.Component {
   render () {
 
   return (
-       <LeftNav open={this.props.isOpen} style={{position:'relative'}}>
+       <div open={this.props.isOpen} style={{position:'relative'}}>
          <MenuItem> Menu One </MenuItem>
          <MenuItem> Menu Two </MenuItem>
-       </LeftNav>
+       </div>
     )
   }
 }
