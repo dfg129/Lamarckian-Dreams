@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import * as actionCreators from '../../actions/app-bar'
 import _debug from 'debug'
 
 const debug = _debug('app:view:menu-item')
@@ -11,9 +10,10 @@ class MenuItem extends React.Component {
 
     var style = {
       maxWidth: '100%',
-      width: '100%',
-      height: '20vh',
-      backgroundColor: 'blue'
+      width: '15%',
+      height: '10vh',
+      marginLeft: '20px',
+      backgroundColor: 'lightblue'
     }
 
     return (
@@ -24,13 +24,4 @@ class MenuItem extends React.Component {
   }
 }
 
-function mapStateToProps ({appBar}) {
-  return {
-
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  actionCreators
-) (MenuItem)
+export default MenuItem

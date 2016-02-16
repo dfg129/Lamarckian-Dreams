@@ -10,15 +10,13 @@ class LeftNav extends React.Component {
   render () {
     const open = this.props.open ? true : "none"
 
-    debug(open)
-
     var style = {
       maxWidth: '100%',
       width: '100%',
       height: '20vh',
       display: open
     }
-
+debug(this.props.children)
     return (
       <div style={style}>
         {this.props.children}

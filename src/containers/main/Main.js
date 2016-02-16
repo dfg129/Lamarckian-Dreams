@@ -2,7 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import LeftNav from '../navbars/LeftNav'
-import MenuItem from '../menus/MenuItem'
+import MenuList from '../menus/MenuList'
 import _debug from 'debug'
 
 const debug = _debug('app:view:main')
@@ -11,11 +11,15 @@ class Main extends React.Component {
 
 
   render () {
-  debug("isOpen : " + this.props.isOpen)
+  var data = [
+    {id: 1, label: "Menu Item 1"},
+    {id: 2, label: "Menu Item 2"}
+  ];
+
+
   return (
        <LeftNav open={this.props.isOpen} style={{position:'relative'}}>
-         <MenuItem> Menu One </MenuItem>
-
+         <MenuList data={data}/>
        </LeftNav>
     )
   }
