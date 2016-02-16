@@ -1,8 +1,8 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-import LeftNav from 'material-ui/lib/left-nav'
-import MenuItem from 'material-ui/lib/menus/menu-item'
+import LeftNav from '../navbars/LeftNav'
+import MenuItem from '../menus/MenuItem'
 import _debug from 'debug'
 
 const debug = _debug('app:view:main')
@@ -11,12 +11,12 @@ class Main extends React.Component {
 
 
   render () {
-
+  debug("isOpen : " + this.props.isOpen)
   return (
-       <div open={this.props.isOpen} style={{position:'relative'}}>
+       <LeftNav open={this.props.isOpen} style={{position:'relative'}}>
          <MenuItem> Menu One </MenuItem>
-         <MenuItem> Menu Two </MenuItem>
-       </div>
+
+       </LeftNav>
     )
   }
 }
